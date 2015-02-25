@@ -40,7 +40,8 @@
                     magit-gitflow
                     cyberpunk-theme
                     wn-mode
-                    window-number))
+                    window-number
+                    syslog-mode))
 (setq prelude-packages (append my-packages prelude-packages))
 
 (prelude-install-packages)
