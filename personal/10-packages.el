@@ -23,7 +23,8 @@
 ;; My custom packages
 
 ;;; Code:
-
+(disable-theme 'zenburn)
+(setq magit-last-seen-setup-instructions "1.4.0")
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
@@ -58,7 +59,7 @@
 (auto-update)
 
 (setq twittering-use-master-password t)
-(load-theme 'cyberpunk t)
+;; (load-theme 'cyberpunk t)
 (add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
 (add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
 (provide '10-packages)
