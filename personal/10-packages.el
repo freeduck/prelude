@@ -46,7 +46,7 @@
 
 (prelude-install-packages)
 (every #'require my-packages)
-
+(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
 (defun auto-update ()
   (interactive)
   (save-excursion
