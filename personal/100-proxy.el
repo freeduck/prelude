@@ -23,16 +23,16 @@
 ;; If system proxy is set activate it in emacs
 
 ;;; Code:
-(when (not (getenv "http_proxy"))
-  (if (string= "manual" (replace-regexp-in-string "[\n']*\\'" ;remove '\n from end
-                                                  ""
-                                                  (replace-regexp-in-string "\\`[']" ;Remove ' from beginnign
-                                                                            ""
-                                                                            (shell-command-to-string "gsettings get org.gnome.system.proxy mode"))))
-      (progn
-        (setenv "http_proxy" "http://localhost:3128")
-        (setenv "https_proxy" "https://localhost:3128")
-        (setenv "no_proxy" "localhost,127.0.0.1,.tdk.dk,.int.yousee.dk"))))
+
+;; (if (string= "manual" (replace-regexp-in-string "[\n']*\\'" ;remove '\n from end
+;;                                                 ""
+;;                                                 (replace-regexp-in-string "\\`[']" ;Remove ' from beginnign
+;;                                                                           ""
+;;                                                                           (shell-command-to-string "gsettings get org.gnome.system.proxy mode"))))
+;;     (progn
+;;       (setenv "http_proxy" "http://localhost:3128")
+;;       (setenv "https_proxy" "https://localhost:3128")
+;;       (setenv "no_proxy" "localhost,127.0.0.1,.tdk.dk,.int.yousee.dk")))
 
 
 (provide '100-proxy)
