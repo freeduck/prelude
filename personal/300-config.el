@@ -23,31 +23,6 @@
 ;; Configurations
 
 ;;; Code:
-;(add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
-(defun git-stamp ()
-  (interactive)
-  (kill-new (replace-regexp-in-string "\n$" ""
-                                      (shell-command-to-string "date +%F-%H-%M-%S"))))
-
-(require 'dired+)
-(require 'dired-details+)
-(require 'bookmark+)
-
-(add-hook 'clojure-mode-hook (lambda ()
-                               (clj-refactor-mode 1)
-                               (cljr-add-keybindings-with-prefix "C-c C-m")))
-
-(when (boundp 'helm-map)
-  (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)) ; rebind tab to run persistent action
-
-(add-to-list 'load-path "/usr/share/doc/git-core-doc/contrib/emacs")
-(add-to-list 'auto-mode-alist '("\\.j2\\'" . jinja2-mode))
-(add-to-list 'eshell-visual-commands "npm")
-(add-to-list 'eshell-visual-commands "node")
+(add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
 (provide '300-config)
-
-
-
-;;(add-to-list 'eshell-visual-commands "make")
-
 ;;; 300-config.el ends here
