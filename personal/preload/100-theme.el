@@ -23,14 +23,10 @@
 ;; Load theme
 
 ;;; Code:
-(require 'package)
-(package-initialize)
-(when (package-installed-p 'cyberpunk-theme)
-  (setq prelude-theme 'cyberpunk))
+
+(setq prelude-theme 'cyberpunk)
 
 (setq magit-last-seen-setup-instructions "1.4.0")
-(setq tramp-verbose 5)
-(setq projectile-mode-line nil)
-(setq gtags-auto-update t)
+
 (provide '100-theme)
 ;;; 100-theme.el ends here
