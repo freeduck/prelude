@@ -30,14 +30,13 @@
                     dired+
                     dired-details+
                     icicles
-                    ;magit-gitflow
+                    magit-gitflow
                     cyberpunk-theme
-                    ;wn-mode
-                    ;window-number
-                    syslog-mode
-                    logstash-conf
-                    jinja2-mode))
+                    wn-mode
+                    window-number
+                    syslog-mode))
 
 (prelude-require-packages my-packages)
+(mapc 'require my-packages)
 (provide '200-packages)
 ;;; 200-packages.el ends here
