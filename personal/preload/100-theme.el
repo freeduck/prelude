@@ -27,6 +27,7 @@
 (setq prelude-theme 'cyberpunk)
 
 (setq magit-last-seen-setup-instructions "1.4.0")
-
+(setq tramp-verbose 5)
+(setq projectile-mode-line nil)
 (provide '100-theme)
 ;;; 100-theme.el ends here
