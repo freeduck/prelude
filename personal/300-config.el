@@ -24,5 +24,9 @@
 
 ;;; Code:
 (add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
+(defun git-stamp ()
+  (interactive)
+  (kill-new (replace-regexp-in-string "\n$" ""
+                                      (shell-command-to-string "date +%F-%H-%M-%S"))))
 (provide '300-config)
 ;;; 300-config.el ends here
