@@ -34,7 +34,8 @@
                     cyberpunk-theme
                     wn-mode
                     window-number
-                    syslog-mode))
+                    syslog-mode
+                    logstash-conf))
 
 (prelude-require-packages my-packages)
 (mapc 'require my-packages)
