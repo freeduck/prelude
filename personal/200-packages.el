@@ -38,6 +38,5 @@
                     logstash-conf))
 
 (prelude-require-packages my-packages)
-(mapc 'require my-packages)
 (provide '200-packages)
 ;;; 200-packages.el ends here
