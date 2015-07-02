@@ -32,8 +32,8 @@
                     icicles
                     ;magit-gitflow
                     cyberpunk-theme
-                    wn-mode
-                    window-number
+                    ;wn-mode
+                    ;window-number
                     syslog-mode
                     logstash-conf))
 
