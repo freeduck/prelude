@@ -30,7 +30,7 @@
                     dired+
                     dired-details+
                     icicles
-                    magit-gitflow
+                    ;magit-gitflow
                     cyberpunk-theme
                     wn-mode
                     window-number
