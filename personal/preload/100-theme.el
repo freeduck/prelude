@@ -23,8 +23,9 @@
 ;; Load theme
 
 ;;; Code:
-
-(setq prelude-theme 'cyberpunk)
+(require 'package)
+(when (package-installed-p 'cyberpunk-theme)
+  (setq prelude-theme 'cyberpunk))
 
 (setq magit-last-seen-setup-instructions "1.4.0")
 (setq tramp-verbose 5)
