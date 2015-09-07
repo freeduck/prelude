@@ -24,6 +24,7 @@
 
 ;;; Code:
 (require 'package)
+(package-initialize)
 (when (package-installed-p 'cyberpunk-theme)
   (setq prelude-theme 'cyberpunk))
 
