@@ -24,7 +24,7 @@
 
 ;;; Code:
 
-(setq org-agenda-files (list "~/org/tasks"))
+(setq org-agenda-files (list "~/org/tasks.org"))
 (setq org-default-notes-file "~/org/notes.org")
 
 (setq org-todo-keywords
