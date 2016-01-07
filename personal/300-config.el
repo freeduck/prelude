@@ -29,6 +29,8 @@
   (kill-new (replace-regexp-in-string "\n$" ""
                                       (shell-command-to-string "date +%F-%H-%M-%S"))))
 
+(require 'bookmark+)
+
 (when (boundp 'helm-map)
   (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)) ; rebind tab to run persistent action
 (provide '300-config)
