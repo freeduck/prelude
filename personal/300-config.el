@@ -29,6 +29,8 @@
   (kill-new (replace-regexp-in-string "\n$" ""
                                       (shell-command-to-string "date +%F-%H-%M-%S"))))
 
+(require 'dired+)
+(require 'dired-details+)
 (require 'bookmark+)
 
 (when (boundp 'helm-map)
