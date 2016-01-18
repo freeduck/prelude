@@ -35,7 +35,8 @@
                     ;wn-mode
                     ;window-number
                     syslog-mode
-                    logstash-conf))
+                    logstash-conf
+                    jinja2-mode))
 
 (prelude-require-packages my-packages)
 (provide '200-packages)
