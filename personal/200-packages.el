@@ -28,6 +28,7 @@
                     drupal-mode
                     bookmark+
                     dired+
+                    clj-refactor
                     dired-details+
                     icicles
                     ;magit-gitflow
