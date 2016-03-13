@@ -33,6 +33,10 @@
 (require 'dired-details+)
 (require 'bookmark+)
 
+(add-hook 'clojure-mode-hook (lambda ()
+                               (clj-refactor-mode 1)
+                               (cljr-add-keybindings-with-prefix "C-c C-m")))
+
 (when (boundp 'helm-map)
   (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)) ; rebind tab to run persistent action
 (provide '300-config)
