@@ -41,4 +41,6 @@
   (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)) ; rebind tab to run persistent action
 (provide '300-config)
 
+(add-to-list 'load-path "/usr/share/doc/git-core-doc/contrib/emacs")
+
 ;;; 300-config.el ends here
