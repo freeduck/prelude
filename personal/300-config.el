@@ -42,5 +42,6 @@
 (provide '300-config)
 
 (add-to-list 'load-path "/usr/share/doc/git-core-doc/contrib/emacs")
+(add-to-list 'auto-mode-alist '("\\.j2\\'" . jinja2-mode))
 
 ;;; 300-config.el ends here

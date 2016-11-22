@@ -31,10 +31,11 @@
                     clj-refactor
                     dired-details+
                     icicles
-                    ;magit-gitflow
+                                        ;magit-gitflow
                     cyberpunk-theme
-                    ;wn-mode
-                    ;window-number
+                                        ;wn-mode
+                                        ;window-number
+                    jinja2-mode
                     syslog-mode
                     logstash-conf))
 
