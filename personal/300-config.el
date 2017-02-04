@@ -39,9 +39,13 @@
 
 (when (boundp 'helm-map)
   (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)) ; rebind tab to run persistent action
-(provide '300-config)
 
 (add-to-list 'load-path "/usr/share/doc/git-core-doc/contrib/emacs")
 (add-to-list 'auto-mode-alist '("\\.j2\\'" . jinja2-mode))
+(add-to-list 'eshell-visual-commands "npm")
+(add-to-list 'eshell-visual-commands "node")
+(provide '300-config)
+
+
 
 ;;; 300-config.el ends here
