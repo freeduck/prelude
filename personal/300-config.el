@@ -48,4 +48,6 @@
 
 
 
+;;(add-to-list 'eshell-visual-commands "make")
+
 ;;; 300-config.el ends here

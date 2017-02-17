@@ -32,5 +32,7 @@
 (setq tramp-verbose 5)
 (setq projectile-mode-line nil)
 (setq gtags-auto-update t)
+;; (set-default-font "Monospace-7")
+(require 'iso-transl)
 (provide '100-theme)
 ;;; 100-theme.el ends here
