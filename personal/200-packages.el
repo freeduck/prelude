@@ -25,7 +25,7 @@
 ;;; Code:
 
 (setq my-packages '(nginx-mode
-                    drupal-mode
+                    ;drupal-mode
                     bookmark+
                     dired+
                     clj-refactor
