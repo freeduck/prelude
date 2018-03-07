@@ -27,6 +27,9 @@
 (setq my-packages '(nginx-mode
                     ;drupal-mode
                     bookmark+
+                    dockerfile-mode
+                    groovy-mode
+                    org-bullets
                     dired+
                     clj-refactor
                     dired-details+
