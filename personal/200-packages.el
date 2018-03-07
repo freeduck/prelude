@@ -36,7 +36,7 @@
                                         ;wn-mode
                                         ;window-number
                     jinja2-mode
-                    syslog-mode
+                    terraform-mode
                     logstash-conf))
 
 (prelude-require-packages my-packages)
