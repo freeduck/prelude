@@ -42,6 +42,7 @@
 
 (add-to-list 'load-path "/usr/share/doc/git-core-doc/contrib/emacs")
 (add-to-list 'auto-mode-alist '("\\.j2\\'" . jinja2-mode))
+(global-ede-mode t)
 (when (not (boundp 'eshell-visual-commands))
   (setq eshell-visual-commands '()))
 (add-to-list 'eshell-visual-commands "npm")
