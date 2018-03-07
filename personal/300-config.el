@@ -49,6 +49,7 @@
 (add-to-list 'eshell-visual-commands "node")
 (add-to-list 'eshell-visual-commands "make")
 (add-to-list 'eshell-visual-commands "lein")
+(add-to-list 'tramp-remote-path 'tramp-own-remote-path)
 (provide '300-config)
 
 
