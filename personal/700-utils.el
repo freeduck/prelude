@@ -27,21 +27,10 @@
 (defun control-media (command)
   (call-process "smplayer" nil nil nil "-send-action" command))
 
-(defun media-pause-play()
-  (interactive)
-  (control-media "play_or_pause"))
+(global-set-key (kbd "C-c m p") (lambda ()(interactive)(control-media "play_or_pause")))
+(global-set-key (kbd "C-c m n") (lambda ()(interactive)(control-media "play_next")))
+(global-set-key (kbd "C-c m P") (lambda ()(interactive)(control-media "play_prev")))
 
-(global-set-key (kbd "C-c m p") 'media-pause-play)
-
-(defun media-next()
-  (interactive)
-  (control-media "play_next"))
-(global-set-key (kbd "C-c m n") 'media-pause-play)
-
-(defun media-prev()
-  (interactive)
-  (call-process "smplayer" nil nil nil "-send-action" "play_prev"))
-(global-set-key (kbd "C-c m P") 'media-pause-play)
 
 (provide '700-utils)
 ;;; 700-utils.el ends here
