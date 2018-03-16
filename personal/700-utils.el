@@ -42,9 +42,21 @@
   (interactive)
   (control-media "play_prev"))
 
+(defun media-forward ()
+  "Forward 1 minute"
+  (interactive)
+  (control-media "forward2"))
+
+(defun media-rewind ()
+  "Rewind 1 minute"
+  (interactive)
+  (control-media "rewind2"))
+
 (global-set-key (kbd "C-c m p") 'media-play-pause)
 (global-set-key (kbd "C-c m n") 'media-next)
 (global-set-key (kbd "C-c m P") 'media-prev)
+(global-set-key (kbd "C-c m f") 'media-forward)
+(global-set-key (kbd "C-c m r") 'media-rewind)
 
 
 (provide '700-utils)
