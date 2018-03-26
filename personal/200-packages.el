@@ -32,16 +32,25 @@
                     org-bullets
                     dired+
                     clj-refactor
+                    use-package
                     dired-details+
                     icicles
                                         ;magit-gitflow
                     cyberpunk-theme
                                         ;wn-mode
                                         ;window-number
-                    jinja2-mode
+                    ;jinja2-mode
                     terraform-mode
                     logstash-conf))
-
+(add-to-list 'load-path "~/memacs")
 (prelude-require-packages my-packages)
+(use-package pipenv
+  :hook (python-mode . pipenv-mode)
+  :init
+  (setq
+   pipenv-projectile-after-switch-function
+   #'pipenv-projectile-after-switch-extended))
+
+(provide 'memacs-pipenv)
 (provide '200-packages)
 ;;; 200-packages.el ends here
