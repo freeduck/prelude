@@ -40,6 +40,10 @@
                                         ;window-number
                     ;jinja2-mode
                     terraform-mode
+                    websocket
+                    request
+                    ein
+                    ein-mumamo
                     logstash-conf))
 (add-to-list 'load-path "~/memacs")
 (prelude-require-packages my-packages)
