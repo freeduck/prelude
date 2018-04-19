@@ -55,6 +55,7 @@
 (add-to-list 'eshell-visual-commands "lein")
 (add-to-list 'tramp-remote-path 'tramp-own-remote-path)
 
+(add-to-list 'exec-path "/home/kristian/.local/bin")
 
 (provide '300-config)
 ;;(add-to-list 'eshell-visual-commands "make")
