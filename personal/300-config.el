@@ -54,10 +54,9 @@
 (add-to-list 'eshell-visual-commands "make")
 (add-to-list 'eshell-visual-commands "lein")
 (add-to-list 'tramp-remote-path 'tramp-own-remote-path)
+
+
 (provide '300-config)
-
-
-
 ;;(add-to-list 'eshell-visual-commands "make")
 
 ;;; 300-config.el ends here
