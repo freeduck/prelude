@@ -31,7 +31,6 @@
                     groovy-mode
                     org-bullets
                     dired+
-                    clj-refactor
                     use-package
                     dired-details+
                     icicles
