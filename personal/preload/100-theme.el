@@ -32,6 +32,7 @@
 (setq tramp-verbose 5)
 (setq projectile-mode-line nil)
 (setq gtags-auto-update t)
+;; (setq exec-path (append exec-path '("/home/kristian/.local/bin")))
 ;; (set-default-font "Monospace-7")
 (require 'iso-transl)
 (provide '100-theme)
