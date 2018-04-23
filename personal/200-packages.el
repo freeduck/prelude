@@ -47,13 +47,13 @@
                     logstash-conf))
 (add-to-list 'load-path "~/memacs")
 (prelude-require-packages my-packages)
-;; (use-package pipenv
-;;   :ensure t
-;;   :hook (python-mode . pipenv-mode)
-;;   :init
-;;   (setq
-;;    pipenv-projectile-after-switch-function
-;;    #'pipenv-projectile-after-switch-extended))
+(use-package pipenv
+  :ensure t
+  :hook (python-mode . pipenv-mode)
+  :init
+  (setq
+   pipenv-projectile-after-switch-function
+   #'pipenv-projectile-after-switch-extended))
 (setenv "PATH" (concat "/home/kristian/.local/bin:" (getenv "PATH")))
 (provide 'memacs-pipenv)
 (provide '200-packages)

@@ -56,7 +56,7 @@
 (add-to-list 'tramp-remote-path 'tramp-own-remote-path)
 
 (add-to-list 'exec-path "/home/kristian/.local/bin")
-
+(setq python-shell-completion-native-disabled-interpreters '("python"))
 (provide '300-config)
 ;;(add-to-list 'eshell-visual-commands "make")
 
