@@ -29,9 +29,6 @@
   (kill-new (replace-regexp-in-string "\n$" ""
                                       (shell-command-to-string "date +%F-%H-%M-%S"))))
 
-(require 'dired+)
-(require 'dired-details+)
-(require 'bookmark+)
 
 (add-hook 'clojure-mode-hook (lambda ()
                                (clj-refactor-mode 1)
