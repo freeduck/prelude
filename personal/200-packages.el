@@ -25,21 +25,12 @@
 ;;; Code:
 
 (setq my-packages '(nginx-mode
-                    ;drupal-mode
-                    bookmark+
                     dockerfile-mode
                     groovy-mode
                     org-bullets
-                    dired+
                     use-package
-                    dired-details+
-                    icicles
                     solarized-theme
-                                        ;magit-gitflow
                     cyberpunk-theme
-                                        ;wn-mode
-                                        ;window-number
-                    ;jinja2-mode
                     terraform-mode
                     websocket
                     request
