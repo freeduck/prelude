@@ -34,6 +34,7 @@
                     use-package
                     dired-details+
                     icicles
+                    solarized-theme
                                         ;magit-gitflow
                     cyberpunk-theme
                                         ;wn-mode
