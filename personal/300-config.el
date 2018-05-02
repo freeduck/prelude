@@ -54,6 +54,12 @@
 
 (add-to-list 'exec-path "/home/kristian/.local/bin")
 (setq python-shell-completion-native-disabled-interpreters '("python"))
+(define-key key-translation-map (kbd "<f9> o") (kbd "ø"))
+(define-key key-translation-map (kbd "<f9> O") (kbd "Ø"))
+(define-key key-translation-map (kbd "<f9> a e") (kbd "æ"))
+(define-key key-translation-map (kbd "<f9> A E") (kbd "Æ"))
+(define-key key-translation-map (kbd "<f9> a a") (kbd "å"))
+(define-key key-translation-map (kbd "<f9> A A") (kbd "Å"))
 (provide '300-config)
 ;;(add-to-list 'eshell-visual-commands "make")
 
