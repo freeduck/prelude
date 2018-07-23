@@ -60,6 +60,12 @@
 (define-key key-translation-map (kbd "<f9> A E") (kbd "Æ"))
 (define-key key-translation-map (kbd "<f9> a a") (kbd "å"))
 (define-key key-translation-map (kbd "<f9> A A") (kbd "Å"))
+
+(with-eval-after-load 'company
+  (define-key company-active-map (kbd "C-n") (lambda () (interactive) (company-complete-common-or-cycle 1)))
+  (define-key company-active-map (kbd "C-p") (lambda () (interactive) (company-complete-common-or-cycle -1))))
+
+(global-set-key (kbd "C-c p y w") 'pyvenv-workon)
 (provide '300-config)
 ;;(add-to-list 'eshell-visual-commands "make")
 
