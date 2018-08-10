@@ -43,7 +43,7 @@
 (add-to-list 'auto-mode-alist '("\\.j2\\'" . jinja2-mode))
 (global-ede-mode t)
 (add-to-list 'auto-mode-alist '("Jenkinsfile\\.aws\\'" . groovy-mode))
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+;; (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 (when (not (boundp 'eshell-visual-commands))
   (setq eshell-visual-commands '()))
 (add-to-list 'eshell-visual-commands "npm")
