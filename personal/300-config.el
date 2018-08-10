@@ -52,6 +52,23 @@
 (add-to-list 'eshell-visual-commands "lein")
 (add-to-list 'tramp-remote-path 'tramp-own-remote-path)
 
+(setq my-org-babel-load-languages
+      '((python . t)
+        (python . t)
+        (emacs-lisp . t)))
+
+(if (< emacs-major-version 26)
+    (add-to-list 'my-org-babel-load-languages '(sh . t))
+  (add-to-list 'my-org-babel-load-languages '(shell . t)))
+
+(org-babel-do-load-languages 'org-babel-load-languages my-org-babel-load-languages)
+
+
+
+;; active Babel languages
+(org-babel-do-load-languages org-babel-load-languages)
+
+
 (add-to-list 'exec-path "/home/kristian/.local/bin")
 (setq python-shell-completion-native-disabled-interpreters '("python"))
 (define-key key-translation-map (kbd "<f9> o") (kbd "ø"))
