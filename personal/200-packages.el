@@ -24,32 +24,45 @@
 
 ;;; Code:
 
-(setq my-packages '(nginx-mode
-                    dockerfile-mode
-                    groovy-mode
-                    org-bullets
-                    use-package
-                    solarized-theme
-                    cyberpunk-theme
-                    intellij-theme
-                    terraform-mode
-                    elpy
-                    ;; websocket
-                    ;; request
-                    ;; ein
-                    ;; ein-mumamo
-                    logstash-conf))
-(elpy-enable)
-(add-to-list 'load-path "~/memacs")
-(prelude-require-packages my-packages)
-;; (use-package pipenv
-;;   :ensure t
-;;   :hook (python-mode . pipenv-mode)
-;;   :init
-;;   (setq
-;;    pipenv-projectile-after-switch-function
-;;    #'pipenv-projectile-after-switch-extended))
+;; (setq my-packages '(nginx-mode
+;;                     dockerfile-mode
+;;                     groovy-mode
+;;                     ;; org-bullets
+;;                     use-package
+;;                     solarized-theme
+;;                     cyberpunk-theme
+;;                     intellij-theme
+;;                     terraform-mode
+;;                     ;; elpy
+;;                     ;; websocket
+;;                     ;; request
+;;                     ;; ein
+;;                     ;; ein-mumamo
+;;                     logstash-conf))
+;; (elpy-enable)
+;; (add-to-list 'load-path "~/memacs")
+;; (prelude-require-packages my-packages)
+(eval-when-compile
+  (require 'use-package))
+;; (require 'diminish)                ;; if you use :diminish
+(require 'bind-key)                ;; if you use any :bind variant
+(use-package pipenv
+  :ensure t
+;;  :hook (python-mode . pipenv-mode)
+  :init
+  (setq
+   pipenv-projectile-after-switch-function
+   #'pipenv-projectile-after-switch-extended)
+  :config
+  (unbind-key "C-c C-p a" pipenv-mode-map)
+  (unbind-key "C-c C-p d" pipenv-mode-map)
+  (unbind-key "C-c C-p s" pipenv-mode-map)
+  (unbind-key "C-c C-p o" pipenv-mode-map)
+  (unbind-key "C-c C-p i" pipenv-mode-map)
+  (unbind-key "C-c C-p u" pipenv-mode-map))
+(use-package ob-ipython
+  :ensure t)
 (setenv "PATH" (concat "/home/kristian/.local/bin:" (getenv "PATH")))
-(provide 'memacs-pipenv)
+;; (provide 'memacs-pipenv)
 (provide '200-packages)
 ;;; 200-packages.el ends here
