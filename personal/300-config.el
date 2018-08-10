@@ -52,6 +52,9 @@
 (add-to-list 'eshell-visual-commands "lein")
 (add-to-list 'tramp-remote-path 'tramp-own-remote-path)
 
+
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+
 (setq my-org-babel-load-languages
       '((python . t)
         (python . t)
