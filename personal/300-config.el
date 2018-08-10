@@ -55,16 +55,14 @@
 
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 
-(setq my-org-babel-load-languages '((python . t)
-                                    (emacs-lisp t)))
-
-(if (< emacs-major-version 26)
-    (add-to-list 'my-org-babel-load-languages '(sh . t))
-  (add-to-list 'my-org-babel-load-languages '(shell . t)))
 
 ;; active Babel languages
 (org-babel-do-load-languages 'org-babel-load-languages
-                             my-org-babel-load-languages)
+                             (append '((python . t)
+                                       (emacs-lisp t))
+                                     (if (< emacs-major-version 26)
+                                         '((sh . t))
+                                       '((shell . t)))))
 
 
 (add-to-list 'exec-path "/home/kristian/.local/bin")
