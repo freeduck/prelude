@@ -23,10 +23,16 @@
 ;; Load theme
 
 ;;; Code:
-(require 'package)
-(package-initialize)
-(when (package-installed-p 'cyberpunk-theme)
- (setq prelude-theme 'cyberpunk))
+;; (require 'package)
+;; (package-initialize)
+;; (when (package-installed-p 'material-theme)
+;;   (setq prelude-theme 'material-light))
+
+(scroll-bar-mode -1)
+
+(setq prelude-theme 'tsdh-dark)
+
+
 
 (setq magit-last-seen-setup-instructions "1.4.0")
 (setq tramp-verbose 5)
