@@ -59,10 +59,15 @@
 ;; active Babel languages
 (org-babel-do-load-languages 'org-babel-load-languages
                              (append '((python . t)
-                                       (emacs-lisp t))
+                                       (ipython . t)
+                                       (clojure . t)
+                                       (emacs-lisp . t)
+                                       (screen . t))
                                      (if (< emacs-major-version 26)
                                          '((sh . t))
                                        '((shell . t)))))
+
+(add-to-list 'org-structure-template-alist '("C" "#+NAME: ?\n#+CALL: " ""))
 
 
 (add-to-list 'exec-path "/home/kristian/.local/bin")
