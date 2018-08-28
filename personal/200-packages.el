@@ -49,10 +49,10 @@
 (use-package pipenv
   :ensure t
 ;;  :hook (python-mode . pipenv-mode)
-  :init
-  (setq
-   pipenv-projectile-after-switch-function
-   #'pipenv-projectile-after-switch-extended)
+  ;; :init
+  ;; (setq
+  ;;  pipenv-projectile-after-switch-function
+  ;;  #'pipenv-projectile-after-switch-extended)
   :config
   (unbind-key "C-c C-p a" pipenv-mode-map)
   (unbind-key "C-c C-p d" pipenv-mode-map)
@@ -62,6 +62,24 @@
   (unbind-key "C-c C-p u" pipenv-mode-map))
 (use-package ob-ipython
   :ensure t)
+
+(defvar my-keys-minor-mode-map
+  (let ((map (make-sparse-keymap)))
+    (define-key map [(control shift return)] 'org-insert-todo-heading-respect-content)
+    map)
+  "my-keys-minor-mode keymap.")
+
+(define-minor-mode my-keys-minor-mode
+  "A minor mode so that my key settings override annoying major modes."
+  :init-value t
+  :lighter " my-keys")
+
+(use-package my-keys-minor-mode
+  :hook org-mode)
+
+;; (use-package ob-clojure
+;;   :ensure t)
+
 (setenv "PATH" (concat "/home/kristian/.local/bin:" (getenv "PATH")))
 ;; (provide 'memacs-pipenv)
 (provide '200-packages)
