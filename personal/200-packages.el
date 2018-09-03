@@ -80,7 +80,9 @@
 (use-package my-keys-minor-mode
   :hook org-mode)
 
-(use-package org)
+(use-package org
+  :config
+  (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append))
 
 ;; (use-package ob-clojure
 ;;   :ensure t)
