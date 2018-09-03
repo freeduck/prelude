@@ -37,6 +37,8 @@
 (when (boundp 'helm-map)
   (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)) ; rebind tab to run persistent action
 
+(setq org-link-abbrev-alist '(("att" . org-attach-expand-link)))
+
 (add-hook 'json-mode-hook #'yas-minor-mode)
 (add-hook 'terraform-mode-hook #'yas-minor-mode)
 (add-to-list 'load-path "/usr/share/doc/git-core-doc/contrib/emacs")
