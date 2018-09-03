@@ -41,9 +41,9 @@
 ;;                     logstash-conf))
 ;; (elpy-enable)
 ;; (add-to-list 'load-path "~/memacs")
-;; (prelude-require-packages my-packages)
-(eval-when-compile
-  (require 'use-package))
+(prelude-require-package 'use-package)
+;; (eval-when-compile
+;;   (require 'use-package))
 ;; (require 'diminish)                ;; if you use :diminish
 (require 'bind-key)                ;; if you use any :bind variant
 (use-package pipenv
@@ -61,6 +61,9 @@
   (unbind-key "C-c C-p i" pipenv-mode-map)
   (unbind-key "C-c C-p u" pipenv-mode-map))
 (use-package ob-ipython
+  :ensure t)
+
+(use-package ox-jekyll
   :ensure t)
 
 (defvar my-keys-minor-mode-map

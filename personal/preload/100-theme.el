@@ -28,7 +28,8 @@
 ;; (when (package-installed-p 'material-theme)
 ;;   (setq prelude-theme 'material-light))
 
-(scroll-bar-mode -1)
+(when (display-graphic-p)
+  (scroll-bar-mode -1))
 
 (setq prelude-theme 'tsdh-dark)
 
