@@ -42,6 +42,7 @@
 ;; (elpy-enable)
 ;; (add-to-list 'load-path "~/memacs")
 (prelude-require-package 'use-package)
+(prelude-require-package 'org)
 ;; (eval-when-compile
 ;;   (require 'use-package))
 ;; (require 'diminish)                ;; if you use :diminish
@@ -65,6 +66,9 @@
 
 (use-package ox-jekyll
   :ensure t)
+
+;; (use-package ox-jekyll-md
+;;   :ensure t)
 
 (defvar my-keys-minor-mode-map
   (let ((map (make-sparse-keymap)))
