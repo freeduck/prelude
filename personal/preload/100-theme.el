@@ -31,7 +31,7 @@
 (when (display-graphic-p)
   (scroll-bar-mode -1))
 
-(setq prelude-theme 'tsdh-dark)
+;; (setq prelude-theme 'tsdh-dark)
 
 
 
