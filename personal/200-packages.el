@@ -93,13 +93,6 @@
               (>= (nth 1 v) 1)
               (>= (nth 2 v) 14)))))
 
-(use-package auto-package-update
-  :ensure t
-  :config
-  (setq auto-package-update-delete-old-versions t)
-  (setq auto-package-update-hide-results t)
-  (auto-package-update-maybe))
-
 (use-package org
   :pin melpa
   :ensure t
