@@ -42,7 +42,7 @@
 ;; (elpy-enable)
 ;; (add-to-list 'load-path "~/memacs")
 (prelude-require-package 'use-package)
-(prelude-require-package 'org)
+;; (prelude-require-package 'org)
 ;; (eval-when-compile
 ;;   (require 'use-package))
 ;; (require 'diminish)                ;; if you use :diminish
@@ -83,10 +83,41 @@
 
 (use-package my-keys-minor-mode
   :hook org-mode)
+;; 9.1.14
+
+(defun org-too-old-p ()
+  (let ((v (mapcar 'string-to-number
+                   (split-string (org-version)
+                                 "[.]"))))
+    (not (and (>= (nth 0 v) 9)
+              (>= (nth 1 v) 1)
+              (>= (nth 2 v) 14)))))
+
+(use-package auto-package-update
+  :ensure t
+  :config
+  (setq auto-package-update-delete-old-versions t)
+  (setq auto-package-update-hide-results t)
+  (auto-package-update-maybe))
 
 (use-package org
+  :pin melpa
+  :ensure t
   :config
-  (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append))
+  (if (org-too-old-p)
+      (progn
+        (package-install 'org nil)
+        (package-install-selected-packages)))
+  (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
+  (org-babel-do-load-languages 'org-babel-load-languages
+                               (append '((python . t)
+                                         (ipython . t)
+                                         (clojure . t)
+                                         (emacs-lisp . t)
+                                         (screen . t))
+                                       (if (< emacs-major-version 26)
+                                           '((sh . t))
+                                         '((shell . t))))))
 
 ;; (use-package ob-clojure
 ;;   :ensure t)
