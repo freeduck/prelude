@@ -85,13 +85,11 @@
   :hook org-mode)
 ;; 9.1.14
 (defun org-version-list ()
-  (cl-destructuring-bind (a b c)
-      '(1 2 3)
-    a))
+  (mapcar 'string-to-number
+          (split-string (org-version)
+                        "[.]")))
 (defun org-too-old-p ()
-  (let ((v (mapcar 'string-to-number
-                   (split-string (org-version)
-                                 "[.]"))))
+  (let ((v (org-version-list)))
     (not (and (>= (nth 0 v) 9)
               (>= (nth 1 v) 1)
               (>= (nth 2 v) 14)))))
@@ -100,21 +98,17 @@
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 ;; (string= org-version)
 (use-package org
-  :pin org
   :ensure t
+  :pin org
   :config
-  (if (org-too-old-p)
-      (progn
-        (package-install 'org nil)
-        (package-install-selected-packages)))
-  (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
   (org-babel-do-load-languages 'org-babel-load-languages
                                (append '((python . t)
                                          (ipython . t)
                                          (clojure . t)
                                          (emacs-lisp . t)
                                          (screen . t))
-                                       (if (< emacs-major-version 26)
+                                       (if (equal (org-version)
+                                                  "8.2.10")
                                            '((sh . t))
                                          '((shell . t))))))
 
