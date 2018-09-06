@@ -84,7 +84,10 @@
 (use-package my-keys-minor-mode
   :hook org-mode)
 ;; 9.1.14
-
+(defun org-version-list ()
+  (cl-destructuring-bind (a b c)
+      '(1 2 3)
+    a))
 (defun org-too-old-p ()
   (let ((v (mapcar 'string-to-number
                    (split-string (org-version)
@@ -93,8 +96,11 @@
               (>= (nth 1 v) 1)
               (>= (nth 2 v) 14)))))
 
+
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
+;; (string= org-version)
 (use-package org
-  :pin melpa
+  :pin org
   :ensure t
   :config
   (if (org-too-old-p)
