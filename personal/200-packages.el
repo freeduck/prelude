@@ -98,7 +98,7 @@
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 ;; (string= org-version)
 (use-package org
-  :ensure t
+  :ensure org-plus-contrib
   :pin org
   :config
   (org-babel-do-load-languages 'org-babel-load-languages
