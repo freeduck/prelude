@@ -101,6 +101,7 @@
   :ensure org-plus-contrib
   :pin org
   :config
+  (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
   (org-babel-do-load-languages 'org-babel-load-languages
                                (append '((python . t)
                                          (ipython . t)
