@@ -94,6 +94,12 @@
               (>= (nth 1 v) 1)
               (>= (nth 2 v) 14)))))
 
+(use-package cyberpunk-theme
+  :ensure t)
+
+(use-package pyvenv
+  :ensure t)
+
 
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 ;; (string= org-version)
