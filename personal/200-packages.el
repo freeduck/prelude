@@ -100,7 +100,6 @@
 (use-package pyvenv
   :ensure t)
 
-
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 ;; (string= org-version)
 (use-package org
