@@ -97,6 +97,17 @@
 (use-package cyberpunk-theme
   :ensure t)
 
+(use-package counsel-tramp
+  :ensure t)
+
+(use-package jinja2-mode
+  :ensure t)
+
+(use-package racket-mode
+  :mode "\\.rkt\\'"
+  :ensure t)
+
+
 (use-package pyvenv
   :ensure t)
 
