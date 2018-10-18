@@ -39,6 +39,7 @@
 
 (setq org-link-abbrev-alist '(("att" . org-attach-expand-link)))
 (setq split-width-threshold 0)
+(setq geiser-guile-binary "guile-2.2")
 (add-hook 'json-mode-hook #'yas-minor-mode)
 (add-hook 'terraform-mode-hook #'yas-minor-mode)
 (add-to-list 'load-path "/usr/share/doc/git-core-doc/contrib/emacs")
