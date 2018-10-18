@@ -121,6 +121,8 @@
 ;; (use-package ob-clojure
 ;;   :ensure t)
 
+(use-package knj-elfeed)
+
 (setenv "PATH" (concat "/home/kristian/.local/bin:" (getenv "PATH")))
 ;; (provide 'memacs-pipenv)
 (provide '200-packages)
