@@ -33,7 +33,16 @@
     :init
     (setq rmh-elfeed-org-files (list "~/org/elfeed.org"))
     :config
-    (elfeed-org)))
+    (elfeed-org))
+  (use-package emms
+    :ensure t
+    :config
+    (progn
+      (emms-standard)
+      (emms-default-players)
+      (setq emms-playlist-buffer-name "Music-EMMS")
+      (setq emms-source-file-default-directory "~/Music/")))
+)
 
 (provide 'knj-elfeed)
 ;;; knj-elfeed.el ends here
