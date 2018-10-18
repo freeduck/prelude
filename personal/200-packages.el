@@ -111,7 +111,6 @@
 (use-package pyvenv
   :ensure t)
 
-
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 ;; (string= org-version)
 (use-package org
@@ -132,6 +131,8 @@
 
 ;; (use-package ob-clojure
 ;;   :ensure t)
+
+(use-package knj-elfeed)
 
 (setenv "PATH" (concat "/home/kristian/.local/bin:" (getenv "PATH")))
 ;; (provide 'memacs-pipenv)
