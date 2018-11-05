@@ -120,6 +120,8 @@
 (use-package org
   :ensure org-plus-contrib
   :pin org
+  :init
+  (setq org-hide-leading-stars t)
   :config
   (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
   (org-babel-do-load-languages 'org-babel-load-languages
