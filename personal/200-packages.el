@@ -107,6 +107,10 @@
   :mode "\\.rkt\\'"
   :ensure t)
 
+(use-package dockerfile-mode
+  :hook (list "\\Dockerfile\\'"
+              "\\Dockerfile.rkt\\'")
+  :ensure t)
 
 (use-package pyvenv
   :ensure t)
