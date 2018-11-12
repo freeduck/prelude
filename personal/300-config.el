@@ -34,8 +34,9 @@
                                (clj-refactor-mode 1)
                                (cljr-add-keybindings-with-prefix "C-c C-m")))
 
-(when (boundp 'helm-map)
-  (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)) ; rebind tab to run persistent action
+;; (when (boundp 'helm-map)
+;;   (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action))
+                                        ; rebind tab to run persistent action
 
 (setq org-link-abbrev-alist '(("att" . org-attach-expand-link)))
 (setq split-width-threshold 0)

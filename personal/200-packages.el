@@ -98,6 +98,21 @@
 (use-package cyberpunk-theme
   :ensure t)
 
+(use-package counsel-tramp
+  :ensure t)
+
+(use-package jinja2-mode
+  :ensure t)
+
+(use-package racket-mode
+  :mode "\\.rkt\\'"
+  :ensure t)
+
+(use-package dockerfile-mode
+  :hook (list "\\Dockerfile\\'"
+              "\\Dockerfile.rkt\\'")
+  :ensure t)
+
 (use-package pyvenv
   :ensure t)
 
@@ -106,6 +121,8 @@
 (use-package org
   :ensure org-plus-contrib
   :pin org
+  :init
+  (setq org-hide-leading-stars t)
   :config
   (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
   (org-babel-do-load-languages 'org-babel-load-languages
