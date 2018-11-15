@@ -108,12 +108,17 @@
   :ensure t)
 
 (use-package dockerfile-mode
-  :hook (list "\\Dockerfile\\'"
-              "\\Dockerfile.rkt\\'")
+  :mode ("\\Dockerfile\\'"
+         "\\Dockerfile.rkt\\'")
   :ensure t)
 
 (use-package pyvenv
   :ensure t)
+
+(use-package cider
+  :init
+  (setq cider-inject-dependencies-at-jack-in nil)
+  (setq lein-parameters "nrepl"))
 
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 ;; (string= org-version)
