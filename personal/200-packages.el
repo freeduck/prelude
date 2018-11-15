@@ -49,18 +49,19 @@
 (require 'bind-key)                ;; if you use any :bind variant
 (use-package pipenv
   :ensure t
-;;  :hook (python-mode . pipenv-mode)
-  ;; :init
-  ;; (setq
-  ;;  pipenv-projectile-after-switch-function
-  ;;  #'pipenv-projectile-after-switch-extended)
-  :config
-  (unbind-key "C-c C-p a" pipenv-mode-map)
-  (unbind-key "C-c C-p d" pipenv-mode-map)
-  (unbind-key "C-c C-p s" pipenv-mode-map)
-  (unbind-key "C-c C-p o" pipenv-mode-map)
-  (unbind-key "C-c C-p i" pipenv-mode-map)
-  (unbind-key "C-c C-p u" pipenv-mode-map))
+  :hook (python-mode . pipenv-mode)
+  :init
+  (setq
+   pipenv-projectile-after-switch-function
+   #'pipenv-projectile-after-switch-extended)
+  ;; :config
+  ;; (unbind-key "C-c C-p a" pipenv-mode-map)
+  ;; (unbind-key "C-c C-p d" pipenv-mode-map)
+  ;; (unbind-key "C-c C-p s" pipenv-mode-map)
+  ;; (unbind-key "C-c C-p o" pipenv-mode-map)
+  ;; (unbind-key "C-c C-p i" pipenv-mode-map)
+  ;; (unbind-key "C-c C-p u" pipenv-mode-map)
+  )
 (use-package ob-ipython
   :ensure t)
 
