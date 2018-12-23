@@ -25,15 +25,19 @@
 ;;; Code:
 ;; (require 'package)
 ;; (package-initialize)
-;; (when (package-installed-p 'material-theme)
-;;   (setq prelude-theme 'material-light))
+;; (when (package-installed-p 'white-theme)
+;;   (setq prelude-theme 'white))
+
+;; (setq prelude-theme 'tsdh-dark)
+;; (setq prelude-theme 'tron)
+;; (setq prelude-theme 'white)
 
 (when (display-graphic-p)
   (scroll-bar-mode -1))
 
 ;; (setq prelude-theme 'tsdh-dark)
 
-
+(add-to-list 'custom-theme-load-path "~/.memacs/themes/tron")
 
 (setq magit-last-seen-setup-instructions "1.4.0")
 (setq tramp-verbose 5)
