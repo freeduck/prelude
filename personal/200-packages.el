@@ -95,8 +95,8 @@
               (>= (nth 1 v) 1)
               (>= (nth 2 v) 14)))))
 
-(use-package cyberpunk-theme
-  :ensure t)
+;; (use-package cyberpunk-theme
+;;   :ensure t)
 
 (use-package counsel-tramp
   :ensure t)
@@ -137,6 +137,7 @@
                                          (emacs-lisp . t)
                                          (screen . t)
                                          (plantuml . t))
+                                         (scheme . t))
                                        (if (equal (org-version)
                                                   "8.2.10")
                                            '((sh . t))

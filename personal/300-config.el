@@ -39,7 +39,7 @@
                                         ; rebind tab to run persistent action
 
 (setq org-link-abbrev-alist '(("att" . org-attach-expand-link)))
-(setq split-width-threshold 0)
+;(setq split-width-threshold 0)
 (setq geiser-guile-binary "guile-2.2")
 (add-hook 'json-mode-hook #'yas-minor-mode)
 (add-hook 'terraform-mode-hook #'yas-minor-mode)
@@ -47,6 +47,7 @@
 (add-to-list 'auto-mode-alist '("\\.j2\\'" . jinja2-mode))
 (global-ede-mode t)
 (add-to-list 'auto-mode-alist '("Jenkinsfile\\.aws\\'" . groovy-mode))
+;; (setq-default mode-line-format nil)
 ;; (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 (when (not (boundp 'eshell-visual-commands))
   (setq eshell-visual-commands '()))
