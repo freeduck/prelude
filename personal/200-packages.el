@@ -136,7 +136,7 @@
                                          (clojure . t)
                                          (emacs-lisp . t)
                                          (screen . t)
-                                         (plantuml . t))
+                                         (plantuml . t)
                                          (scheme . t))
                                        (if (equal (org-version)
                                                   "8.2.10")
