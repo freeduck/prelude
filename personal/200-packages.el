@@ -113,6 +113,10 @@
          "\\Dockerfile.rkt\\'")
   :ensure t)
 
+(use-package php-mode
+  :mode "\\.php\\'"
+  :ensure t)
+
 (use-package pyvenv
   :ensure t)
 
