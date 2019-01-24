@@ -25,8 +25,8 @@
 ;;; Code:
 ;; (require 'package)
 ;; (package-initialize)
-;; (when (package-installed-p 'white-theme)
-;;   (setq prelude-theme 'white))
+(when (package-installed-p 'cyberpunk-theme)
+  (setq prelude-theme 'cyberpunk))
 
 ;; (setq prelude-theme 'tsdh-dark)
 ;; (setq prelude-theme 'tron)
