@@ -65,8 +65,8 @@
 (use-package ob-ipython
   :ensure t)
 
-(use-package ox-jekyll
-  :ensure t)
+;; (use-package ox-jekyll
+;;   :ensure t)
 
 ;; (use-package ox-jekyll-md
 ;;   :ensure t)
@@ -120,10 +120,10 @@
 (use-package pyvenv
   :ensure t)
 
-(use-package cider
-  :init
-  (setq cider-inject-dependencies-at-jack-in nil)
-  (setq lein-parameters "nrepl"))
+;; (use-package cider
+;;   :init
+;;   (setq cider-inject-dependencies-at-jack-in nil)
+;;   (setq lein-parameters "nrepl"))
 
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 ;; (string= org-version)
