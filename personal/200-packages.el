@@ -101,6 +101,10 @@
 (use-package counsel-tramp
   :ensure t)
 
+(use-package groovy-mode
+  :mode ("\\Jenkinsfile")
+  :ensure t)
+
 (use-package jinja2-mode
   :ensure t)
 
