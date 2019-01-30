@@ -65,6 +65,8 @@
 (use-package ob-ipython
   :ensure t)
 
+(use-package org-git-link)
+
 ;; (use-package ox-jekyll
 ;;   :ensure t)
 
@@ -102,7 +104,11 @@
   :ensure t)
 
 (use-package groovy-mode
-  :mode ("\\Jenkinsfile")
+  :mode ("\\Jenkinsfile[^\\]*\\'")
+  :ensure t)
+
+(use-package terraform-mode
+  :mode ("terraform.tfvars")
   :ensure t)
 
 (use-package jinja2-mode
