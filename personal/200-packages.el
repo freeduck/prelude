@@ -65,8 +65,10 @@
 (use-package ob-ipython
   :ensure t)
 
-(use-package ox-jekyll
-  :ensure t)
+(use-package org-git-link)
+
+;; (use-package ox-jekyll
+;;   :ensure t)
 
 ;; (use-package ox-jekyll-md
 ;;   :ensure t)
@@ -101,6 +103,14 @@
 (use-package counsel-tramp
   :ensure t)
 
+(use-package groovy-mode
+  :mode ("\\Jenkinsfile[^\\]*\\'")
+  :ensure t)
+
+(use-package terraform-mode
+  :mode ("terraform.tfvars")
+  :ensure t)
+
 (use-package jinja2-mode
   :ensure t)
 
@@ -120,10 +130,10 @@
 (use-package pyvenv
   :ensure t)
 
-(use-package cider
-  :init
-  (setq cider-inject-dependencies-at-jack-in nil)
-  (setq lein-parameters "nrepl"))
+;; (use-package cider
+;;   :init
+;;   (setq cider-inject-dependencies-at-jack-in nil)
+;;   (setq lein-parameters "nrepl"))
 
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 ;; (string= org-version)
