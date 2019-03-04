@@ -139,9 +139,7 @@
 ;; (string= org-version)
 (use-package org
   :ensure org-plus-contrib
-  :pin org
-  :init
-  (setq org-hide-leading-stars t)
+  :requires (ob-racket)
   :config
   (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
   (org-babel-do-load-languages 'org-babel-load-languages
@@ -151,7 +149,8 @@
                                          (emacs-lisp . t)
                                          (screen . t)
                                          (plantuml . t)
-                                         (scheme . t))
+                                         (scheme . t)
+                                         (racket . t))
                                        (if (equal (org-version)
                                                   "8.2.10")
                                            '((sh . t))
