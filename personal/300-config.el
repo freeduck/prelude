@@ -72,7 +72,7 @@
 ;;                                          '((sh . t))
 ;;                                        '((shell . t)))))
 
-(add-to-list 'org-structure-template-alist '("C" "#+NAME: ?\n#+CALL: " ""))
+;; (add-to-list 'org-structure-template-alist '("C" "#+NAME: ?\n#+CALL: " ""))
 
 
 (add-to-list 'exec-path "/home/kristian/.local/bin")
