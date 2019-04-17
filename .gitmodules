@@ -1,3 +1,6 @@
 [submodule "vendor/emacs-ob-racket"]
 	path = vendor/emacs-ob-racket
 	url = git@github.com:hasu/emacs-ob-racket.git
+[submodule "vendor/godot-gdscript"]
+	path = vendor/godot-gdscript
+	url = git@github.com:francogarcia/godot-gdscript.el.git
