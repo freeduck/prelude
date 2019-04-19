@@ -23,7 +23,29 @@
 ;; Personal configuration of org
 
 ;;; Code:
-
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
+;; (string= org-version)
+(use-package org
+  :ensure org-plus-contrib
+  :pin org
+  :requires (ob-racket)
+  :init
+  (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
+  :config
+  (org-babel-do-load-languages 'org-babel-load-languages
+                               (append '((python . t)
+                                         (ipython . t)
+                                         (clojure . t)
+                                         (emacs-lisp . t)
+                                         (screen . t)
+                                         (plantuml . t)
+                                         (scheme . t)
+                                         (racket . t))
+                                       (if (equal (org-version)
+                                                  "8.2.10")
+                                           '((sh . t))
+                                         '((shell . t)))))
+  (message "Myorg"))
 (let ((notes-file "~/org/notes.org"))
   (setq org-agenda-files (list notes-file))
   (setq org-default-notes-file notes-file))

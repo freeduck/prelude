@@ -65,6 +65,8 @@
 (use-package ob-ipython
   :ensure t)
 
+(use-package godot-gdscript)
+
 (use-package org-git-link)
 
 ;; (use-package ox-jekyll
@@ -134,27 +136,6 @@
 ;;   :init
 ;;   (setq cider-inject-dependencies-at-jack-in nil)
 ;;   (setq lein-parameters "nrepl"))
-
-(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
-;; (string= org-version)
-(use-package org
-  :ensure org-plus-contrib
-  :requires (ob-racket)
-  :config
-  (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
-  (org-babel-do-load-languages 'org-babel-load-languages
-                               (append '((python . t)
-                                         (ipython . t)
-                                         (clojure . t)
-                                         (emacs-lisp . t)
-                                         (screen . t)
-                                         (plantuml . t)
-                                         (scheme . t)
-                                         (racket . t))
-                                       (if (equal (org-version)
-                                                  "8.2.10")
-                                           '((sh . t))
-                                         '((shell . t))))))
 
 ;; (use-package ob-clojure
 ;;   :ensure t)
