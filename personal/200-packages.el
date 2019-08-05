@@ -65,7 +65,7 @@
 (use-package ob-ipython
   :ensure t)
 
-(use-package godot-gdscript)
+;; (use-package godot-gdscript)
 
 (use-package org-git-link)
 
