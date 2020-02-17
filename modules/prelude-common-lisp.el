@@ -65,7 +65,7 @@
     (setq slime-default-lisp 'sbcl))
 
   ;; Add fancy slime contribs
-  (setq slime-contribs '(slime-fancy slime-cl-indent))
+  (setq slime-contribs '(slime-asdf slime-fancy slime-cl-indent))
 
   (setq slime-complete-symbol-function 'slime-fuzzy-complete-symbol
         slime-fuzzy-completion-in-place t
