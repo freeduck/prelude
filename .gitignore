@@ -28,3 +28,6 @@ prelude-cheatsheet.aux
 prelude-cheatsheet.log
 filesets-cache.el
 transient/
+var/
+.cache/
+.lsp-session*
