@@ -1,0 +1,6 @@
+(define-key key-translation-map (kbd "<f9> o") (kbd "ø"))
+(define-key key-translation-map (kbd "<f9> O") (kbd "Ø"))
+(define-key key-translation-map (kbd "<f9> a e") (kbd "æ"))
+(define-key key-translation-map (kbd "<f9> A E") (kbd "Æ"))
+(define-key key-translation-map (kbd "<f9> a a") (kbd "å"))
+(define-key key-translation-map (kbd "<f9> A A") (kbd "Å"))
